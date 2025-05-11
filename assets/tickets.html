@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tickets | ExploreEarth</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .ticket-header {
+      background-color: #00bcd4;
+      color: white;
+      margin-top: 100px;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .ticket-header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .ticket-section {
+    padding: 3rem;
+    max-width: 1700px; /* Increase the max width */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increase min width for each card */
+    gap: 
+    3rem; /* Increase gap between cards */
+    }
+    .ticket-card {
+    background: #fff;
+    border-radius: 12px; /* Slightly round the corners more */
+    padding: 2rem; /* Increase padding for more space inside */
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15); /* Slightly bigger shadow for depth */
+    transition: transform 0.3s ease;
+    max-width: 400px; /* Increase the card width */
+    }
+
+    .ticket-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .ticket-card h2 {
+      color: #00bcd4;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .ticket-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ticket-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 40px;
+    }
+
+    .ticket-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex-shrink: 0;
+    }
+
+    .ticket-card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .ticket-card a:hover {
+      color: #00bcd4;
+    }
+
+    @media (max-width: 768px) {
+      .ticket-header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar from ExploreEarth -->
+  <nav class="top-nav">
+    <div class="logo">Explore<span>Earth</span></div>
+    <ul>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="toptours.html">TOURS</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="#">🌐 EN</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="ticket-header">
+    <h1>🎟️ Travel & Event Tickets</h1>
+    <p>Book flights, hotels, rides, and event tickets – all in one place!</p>
+  </section>
+
+  <!-- Tickets Grid -->
+  <section class="ticket-section">
+    <!-- Flights -->
+    <div class="ticket-card">
+      <h2>✈️ Flights</h2>
+      <ul>
+        <li><img src="img/kayak.png" alt="Kayak"><a href="https://www.kayak.com" target="_blank">Kayak</a></li>
+        <li><img src="img/skyscanner.png" alt="Skyscanner"><a href="https://www.skyscanner.com" target="_blank">Skyscanner</a></li>
+        <li><img src="img/expedia.png" alt="Expedia"><a href="https://www.expedia.com" target="_blank">Expedia Flights</a></li>
+        <li><img src="img/google-flights.png"Google Flights"><a href="https://www.google.com/flights" target="_blank">Google Flights</a></li>
+      </ul>
+    </div>
+
+    <!-- Hotels -->
+    <div class="ticket-card">
+      <h2>🏨 Hotels</h2>
+      <ul>
+        <li><img src="img/agoda.png" alt="Agoda"><a href="https://www.agoda.com" target="_blank">Agoda</a></li>
+        <li><img src="img/booking.png" alt="Booking"><a href="https://www.booking.com" target="_blank">Booking.com</a></li>
+        <li><img src="img/trivago.png" alt="Trivago"><a href="https://www.trivago.com" target="_blank">Trivago</a></li>
+        <li><img src="img/hotels.png" alt="Hotels"><a href="https://www.hotels.com" target="_blank">Hotels.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Transport -->
+    <div class="ticket-card">
+      <h2>🚗 Transport</h2>
+      <ul>
+        <li><img src="img/uber.png" alt="Uber"><a href="https://www.uber.com" target="_blank">Uber</a></li>
+        <li><img src="img/lyft.png" alt="Lyft"><a href="https://www.lyft.com" target="_blank">Lyft</a></li>
+        <li><img src="img/gettransfer.png" alt="GetTransfer"><a href="https://www.gettransfer.com" target="_blank">GetTransfer</a></li>
+        <li><img src="img/blablacar.png" alt="BlaBlaCar"><a href="https://www.blablacar.com" target="_blank">BlaBlaCar</a></li>
+      </ul>
+    </div>
+
+    <!-- Events -->
+    <div class="ticket-card">
+      <h2>🎤 Events</h2>
+      <ul>
+        <li><img src="img/tickermaster.png" alt="Ticketmaster"><a href="https://www.ticketmaster.com" target="_blank">Ticketmaster</a></li>
+        <li><img src="img/stubhub.png" alt="StubHub"><a href="https://www.stubhub.com" target="_blank">StubHub</a></li>
+        <li><img src="img/viagogo.png" alt="Viagogo"><a href="https://www.viagogo.com" target="_blank">Viagogo</a></li>
+        <li><img src="img/evenbrite.png" alt="Eventbrite"><a href="https://www.eventbrite.com" target="_blank">Eventbrite</a></li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>

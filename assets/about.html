@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - ExploreEarth</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('img/cloudtexture.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #222;
+      min-height: 100vh;
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .top-nav .logo {
+      font-size: 30px; /* Matching the size from Contact Us page */
+      font-weight: bold;
+      color: white;
+    }
+
+    .top-nav .logo span {
+      color: #ffd700;
+    }
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 60px;
+      padding-right: 40px;
+    }
+
+    .top-nav ul li a {
+      font-size: 18px; /* Matching the size from Contact Us page */
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .top-nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    .about-container {
+      width: 80%;
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .about-container h1 {
+      font-size: 35px; /* Same font size for the heading */
+      color: #0056b3;
+      margin-bottom: 20px;
+      text-align:left;
+    }
+
+    .about-container p {
+      font-size: 15px; /* Same font size for paragraphs */
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .about-container img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      margin-top: 0px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      .top-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+        margin-top: 10px;
+      }
+
+      .about-container {
+        width: 90%;
+        margin: 30px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+      <div class="logo">Explore<span>Earth</span></div>
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="toptours.html">TOURS</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="#">🌐 EN</a></li>
+      </ul>
+    </nav>
+
+  <div class="about-container">
+    <h1>About Us</h1>
+    <p>
+      Welcome to ExploreEarth, your one-stop destination for all things travel! We are a passionate team of explorers, adventurers, and wanderers who believe that travel has the power to change lives. Whether you're looking to hike through the majestic Alps, immerse yourself in the rich culture of Asia, or simply relax on the pristine beaches of the Caribbean, we are here to guide you every step of the way. Our goal is to offer you the best travel experiences and make your journey as memorable as possible. Join us and let's discover the beauty of this world together.
+    </p>
+    <p>
+      At ExploreEarth, we curate travel experiences that are tailored to suit all kinds of travelers. We believe in the power of travel to inspire, educate, and rejuvenate the soul. Our team is constantly on the lookout for new, exciting destinations, hidden gems, and the latest travel trends. From providing expert tips on navigating the best tourist spots to offering you insider secrets on off-the-beaten-path locales, we are committed to helping you make the most out of every trip. Our website is designed to be a helpful resource, with a wide variety of travel guides, itineraries, and tools to assist you in planning your next adventure.
+    </p>
+    <p>
+      We believe that everyone should have the opportunity to explore the world, which is why we focus on making travel accessible and affordable. Whether you're an experienced traveler or just starting your journey, our platform is designed to inspire and equip you with everything you need to embark on your next adventure. Our diverse collection of destinations spans across continents, offering a wide range of experiences – from cultural tours in Europe to wildlife safaris in Africa. No matter where you want to go, we’re here to help you create your perfect itinerary.
+    </p>
+    <p>
+      Our team is made up of passionate travel experts, each with their own unique experiences and expertise. We work tirelessly to provide you with honest, up-to-date information and travel recommendations that you can trust. Our mission is simple: to inspire you to explore, discover, and fall in love with the world around you. Travel is not just about seeing new places; it's about connecting with people, cultures, and nature in ways that will leave you with unforgettable memories. With ExploreEarth, you can rest assured that your travels will be meaningful, enriching, and filled with excitement.
+    </p>
+    <img src="https://img.freepik.com/premium-vector/logo-world-with-words-explore-world_961871-2946.jpg" alt="Team or Travel Banner">
+  </div>
+
+</body>
+</html>

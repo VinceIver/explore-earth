@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asia - ExploreEarth</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    body {
+      background-color: #f0fbe5; /* Tropical light green background */
+      color: #2e3b2c; /* Jungle dark text */
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    /* Navigation */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(34, 139, 34, 0.1);
+    }
+
+    .top-nav .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #2e7d32; /* Deep tropical green */
+    }
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    .top-nav ul li a {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #2e7d32;
+      transition: 0.3s;
+    }
+
+    .top-nav ul li a:hover {
+      color: #66bb6a; /* Jungle green highlight */
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://wallpapercat.com/w/full/c/7/9/1449726-1920x1200-desktop-hd-asia-background-photo.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0, 64, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 6px rgba(0, 64, 0, 0.3);
+    }
+
+    /* Image Gallery Section */
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 64, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: white;
+      font-weight: 500;
+      background-color: #1b5e20; /* Deep forest green */
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="top-nav">
+      <div class="logo">Explore<span>Earth</span></div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="toptours.html">Tours</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">🌐 EN</a></li>
+      </ul>
+    </nav>
+    <div class="hero-text">
+      <h1>Discover the Wonders of Asia</h1>
+      <p>Explore diverse cultures, stunning landscapes, and rich history from the heart of Asia.</p>
+    </div>
+  </header>
+
+  <section class="gallery-container">
+    <section class="gallery">
+      <img src="img/asia1.jpg" alt="Asia Image 1">
+      <img src="img/asia2.jpg" alt="Asia Image 2">
+      <img src="img/asia 3.avif" alt="Asia Image 3">
+      <img src="img/asia 4.jpg" alt="Asia Image 4">
+    </section>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ExploreEarth. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
