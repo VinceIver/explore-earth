@@ -213,36 +213,24 @@
       color: white;
     }
 
-    /* Media Queries */
+    /* Mobile Styles */
     @media (max-width: 768px) {
       .top-nav ul {
         display: none;
-      }
-
-      .mobile-nav {
-        display: block;
         position: absolute;
         top: 80px;
         right: 20px;
-        background-color: white;
-        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 200px;
+        border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        display: none;
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
+        padding: 20px;
       }
 
-      .mobile-nav a {
-        padding: 10px;
-        text-decoration: none;
-        color: #0056b3;
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      .mobile-nav a:hover {
-        color: #ffd700;
+      .top-nav ul.active {
+        display: flex;
       }
 
       .hamburger {
@@ -256,18 +244,18 @@
   <header class="hero">
     <nav class="top-nav">
       <div class="logo">Explore<span>Earth</span></div>
-      <ul>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="nav-list">
         <li><a href="../index.html">Home</a></li>
         <li><a href="toptours.html">Tours</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="#">🌐 EN</a></li>
       </ul>
-      <div class="hamburger" onclick="toggleMobileNav()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </nav>
     <div class="hero-text">
       <h1>Discover Europe</h1>
@@ -326,10 +314,12 @@
   </footer>
 
   <script>
-    function toggleMobileNav() {
-      const nav = document.querySelector('.mobile-nav');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
   </script>
 
 </body>
