@@ -127,6 +127,58 @@
       background-color: #1b5e20; /* Deep forest green */
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: #2e7d32;
+      border-radius: 5px;
+    }
+
+    .top-nav ul {
+      display: flex;
+    }
+
+    .top-nav ul li {
+      display: block;
+    }
+
+    .top-nav ul li a {
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .top-nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .top-nav ul.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -134,7 +186,12 @@
   <header class="hero">
     <nav class="top-nav">
       <div class="logo">Explore<span>Earth</span></div>
-      <ul>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="nav-list">
         <li><a href="../index.html">Home</a></li>
         <li><a href="toptours.html">Tours</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -160,6 +217,15 @@
   <footer class="footer">
     <p>© 2025 ExploreEarth. All rights reserved.</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

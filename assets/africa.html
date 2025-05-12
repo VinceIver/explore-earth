@@ -62,10 +62,28 @@
       color: #c0855f; /* Warm Orange */
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      width: 30px;
+      height: 25px;
+      justify-content: space-between;
+    }
+
+    .hamburger div {
+      width: 100%;
+      height: 4px;
+      background-color: #7e5c47;
+      border-radius: 5px;
+    }
+
     /* Hero Section */
     .hero {
       background-image: url('img/africa-bg.jpg');
-      background-size: fill;
+      background-size: cover;
       background-position: center;
       height: 400px;
       color: white;
@@ -105,12 +123,13 @@
       margin-bottom: 40px;
     }
 
-   .wildlife .animals {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-content: center;  /* Add this */
-  }
+    .wildlife .animals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-content: center;  
+    }
+
     .wildlife .animals .animal-card {
       background-color: white;
       border-radius: 15px;
@@ -130,18 +149,17 @@
     }
 
     .wildlife .animal-card p {
-    padding: 15px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #7e5c47;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-  }
-
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+      background-color: #7e5c47;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+    }
 
     /* Safari Adventure Section */
     .safari-adventure {
@@ -158,11 +176,11 @@
     }
 
     .safari-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-content: center;  /* Add this */
-  }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;  
+    }
 
     .safari-grid .safari-card {
       background-color: #ffffff;
@@ -182,17 +200,17 @@
       object-fit: cover;
     }
 
-   .safari-grid .safari-card .description {
-    padding: 15px;
-    background-color: #7e5c47;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-  }
+    .safari-grid .safari-card .description {
+      padding: 15px;
+      background-color: #7e5c47;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+    }
 
     /* Footer */
     .footer {
@@ -202,6 +220,65 @@
       color: white;
     }
 
+    /* Media Queries for Mobile */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+      .top-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+        margin-top: 10px;
+        display: none; /* Hide the menu by default */
+      }
+
+      .top-nav ul.active {
+        display: flex; /* Show the menu when active */
+      }
+
+      .top-nav ul li a {
+        font-size: 16px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        max-width: 90%;
+      }
+
+      .wildlife h2 {
+        font-size: 28px;
+      }
+
+      .wildlife .animals {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .safari-adventure h2 {
+        font-size: 28px;
+      }
+
+      .safari-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer {
+        padding: 15px;
+      }
+
+      /* Hamburger menu visibility */
+      .hamburger {
+        display: flex;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -209,6 +286,11 @@
   <header class="hero">
     <nav class="top-nav">
       <div class="logo">Explore<span>Earth</span></div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="toptours.html">Tours</a></li>
@@ -281,5 +363,12 @@
     <p>© 2025 ExploreEarth. All rights reserved.</p>
   </footer>
 
+  <script>
+    // Toggle hamburger menu
+    function toggleMenu() {
+      const menu = document.querySelector('ul');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

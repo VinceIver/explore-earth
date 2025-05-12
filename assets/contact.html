@@ -19,6 +19,7 @@
       color: #333;
       min-height: 100vh;
       padding-top: 120px;
+      scroll-behavior: smooth;
     }
 
     .top-nav {
@@ -117,13 +118,76 @@
     .submit-link:hover {
       background-color: #0056b3;
     }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: #264653;
+      border-radius: 5px;
+    }
+
+    .top-nav ul {
+      display: flex;
+    }
+
+    .top-nav ul li {
+      display: block;
+    }
+
+    .top-nav ul li a {
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        padding: 40px 20px;
+      }
+
+      .top-nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .top-nav ul.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
 
   <nav class="top-nav">
     <div class="logo">Explore<span>Earth</span></div>
-    <ul>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-list">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="toptours.html">TOURS</a></li>
       <li><a href="about.html">ABOUT US</a></li>
@@ -135,19 +199,41 @@
   <div class="contact-container">
     <h1>Contact Us</h1>
     
-    <form>
+    <form id="contactForm">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Your name">
+      <input type="text" id="name" placeholder="Your name" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Your email">
+      <input type="email" id="email" placeholder="Your email" required>
 
       <label for="message">Message</label>
-      <textarea id="message" rows="5" placeholder="Your message"></textarea>
+      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
 
-      <a href="../index.html" class="submit-link">Send Message</a>
+      <button type="submit" class="submit-link">Send Message</button>
     </form>
   </div>
+
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Form validation (basic)
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        event.preventDefault(); // Prevent form submission
+      }
+    });
+  </script>
 
 </body>
 </html>

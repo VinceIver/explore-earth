@@ -62,6 +62,24 @@
       color: #ffd700;
     }
 
+    /* Mobile Nav - Hidden by default */
+    .mobile-nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: #0056b3;
+    }
+
     /* Hero Section */
     .hero {
       background-image: url('img/europe-bg.jpg');
@@ -103,18 +121,18 @@
     }
 
     .split-section img {
-    width: 35%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 35%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .split-section .content {
-    width: 60%;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #555;
-}
+      width: 60%;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+    }
 
     /* Destinations Section (Card Grid) */
     .destinations {
@@ -130,12 +148,12 @@
     }
 
     .destination-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-content: center; /* This centers the grid items */
-    max-width: 1200px;
-    margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .destination-cards .card {
@@ -151,10 +169,11 @@
     }
 
     .destination-cards img {
-    width: 100%;
-    height: 200px;
-    object-fit: fill;
+      width: 100%;
+      height: 200px;
+      object-fit: fill;
     }
+
     .destination-cards .card p {
       padding: 10px;
       font-size: 18px;
@@ -194,6 +213,42 @@
       color: white;
     }
 
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .top-nav ul {
+        display: none;
+      }
+
+      .mobile-nav {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mobile-nav a {
+        padding: 10px;
+        text-decoration: none;
+        color: #0056b3;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .mobile-nav a:hover {
+        color: #ffd700;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -208,12 +263,25 @@
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="#">🌐 EN</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMobileNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
     <div class="hero-text">
       <h1>Discover Europe</h1>
       <p>From the art-filled streets of Paris to the ancient ruins of Rome, Europe is a continent brimming with history, beauty, and endless adventures.</p>
     </div>
   </header>
+
+  <div class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="toptours.html">Tours</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="#">🌐 EN</a>
+  </div>
 
   <section class="split-section">
     <img src="img/florenz.jpg" alt="Europe Image 1">
@@ -256,6 +324,13 @@
   <footer class="footer">
     <p>© 2025 ExploreEarth. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMobileNav() {
+      const nav = document.querySelector('.mobile-nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 
 </body>
 </html>

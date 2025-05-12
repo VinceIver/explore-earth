@@ -6,67 +6,73 @@
   <title>ExploreEarth</title>
   <link rel="stylesheet" href="assets/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
   <header class="hero">
     <nav class="top-nav">
       <div class="logo">Explore<span>Earth</span></div>
-      <ul>
+      <ul class="nav-list">
         <li><a href="index.html">HOME</a></li>
         <li><a href="assets/toptours.html">TOURS</a></li>
-         <li><a href="assets/about.html">ABOUT US</a></li>
+        <li><a href="assets/about.html">ABOUT US</a></li>
         <li><a href="assets/contact.html">CONTACT US</a></li>
         <li><a href="#">🌐 EN</a></li>
       </ul>
+      <div class="burger" onclick="toggleMenu()">☰</div>
     </nav>
 
     <div class="hero-text">
       <h1>Welcome to Explore<span>Earth</span></h1>
       <div class="buttons">
-        <button><a href="assets/toptours.html">🌍 Top 10 Tours</a></button>
-        <button> <a href="assets/tickets.html">🎟️ Tickets </a></button>
+        <button><a href="assets/toptours.html">Top 10 Tours</a></button>
+        <button> <a href="assets/tickets.html">Tickets </a></button>
       </div>
     </div>
   </header>
 
-<section class="places">
-  <h2>PLACES TO GO <span class="small-text">(click each box)</span></h2>
-  <div class="card-container">
-    <a href="assets/europe.html" class="card">
-      <div class="image-card">
-        <img src="assets/img/europe.png" alt="Europe">
-      </div>
-      <p>EUROPE</p>
-    </a>
-    <a href="assets/asia.html" class="card">
-      <div class="image-card">
-        <img src="assets/img/asia.png" alt="Asia">
-      </div>
-      <p>ASIA</p>
-    </a>
-    <a href="assets/africa.html" class="card">
-      <div class="image-card">
-        <img src="assets/img/africa.png" alt="Africa">
-      </div>
-      <p>AFRICA</p>
-    </a>
-    <a href="assets/america.html" class="card">
-      <div class="image-card">
-        <img src="assets/img/america.png" alt="America">
-      </div>
-      <p>AMERICA</p>
-    </a>
+  <section class="places">
+    <h2>PLACES TO GO <span class="small-text">(click each box)</span></h2>
+    <div class="card-container">
+      <a href="assets/europe.html" class="card">
+        <div class="image-card">
+          <img src="assets/img/europe.png" alt="Europe">
+        </div>
+        <p>EUROPE</p>
+      </a>
+      <a href="assets/asia.html" class="card">
+        <div class="image-card">
+          <img src="assets/img/asia.png" alt="Asia">
+        </div>
+        <p>ASIA</p>
+      </a>
+      <a href="assets/africa.html" class="card">
+        <div class="image-card">
+          <img src="assets/img/africa.png" alt="Africa">
+        </div>
+        <p>AFRICA</p>
+      </a>
+      <a href="assets/america.html" class="card">
+        <div class="image-card">
+          <img src="assets/img/america.png" alt="America">
+        </div>
+        <p>AMERICA</p>
+      </a>
+      <a href="assets/australia.html" class="card">
+        <div class="image-card">
+          <img src="assets/img/australia.png" alt="Australia">
+        </div>
+        <p>AUSTRALIA</p>
+      </a>
+    </div>
+  </section>
 
-    <a href="assets/australia.html" class="card">
-      <div class="image-card">
-        <img src="assets/img/australia.png" alt="Australia">
-      </div>
-      <p>AUSTRALIA</p>
-    </a>
-  </div>
-</section>
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector('.nav-list');
+      navList.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
