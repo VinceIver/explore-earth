@@ -269,3 +269,215 @@ body {
     left: 20px;
   }
 }
+
+.footer {
+  background-image: url(img/cloudtexture.jpg);
+  background-size: cover;
+  padding: 40px 20px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-subscribe {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer .ph {
+  color: red;
+}
+.footer .ph::before {
+  content: "";
+  color: blue;
+}
+
+.footer-about p {
+  margin: 10px 0 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.social-icons a {
+  font-size: 30px;
+  color: #1877f2;
+  margin-right: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-subscribe h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: #666;
+}
+
+.footer-subscribe input {
+  padding: 10px;
+  width: 100%;
+  max-width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe button {
+  background-color: #1e7efb;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  max-width: 220px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-subscribe button:hover {
+  background-color: #166fe0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-subscribe {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+/* Mobile responsive footer layout */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Adjust gap between stacked items */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  /* Align items to center for mobile */
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-subscribe {
+    flex: 1 1 100%; /* Full width on mobile */
+    min-width: 100%; /* Ensure full width on mobile */
+    text-align: center; /* Center align the content */
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  /* Adjust footer heading sizes */
+  .footer h2 {
+    font-size: 22px; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px; /* Reduce the bottom margin */
+  }
+
+  /* Adjust links and contact text size */
+  .footer-links ul,
+  .footer-contact ul {
+    padding-left: 0;
+    margin-bottom: 10px; /* Add spacing between links */
+  }
+
+  .footer-links li,
+  .footer-contact li {
+    margin: 5px 0; /* Reduce space between list items */
+  }
+
+  .footer .ph {
+    font-size: 14px; /* Adjust phone number size */
+    margin-bottom: 10px; /* Add space below */
+  }
+
+  /* Adjust social icons for mobile */
+  .social-icons a {
+    font-size: 24px; /* Adjust icon size */
+    margin: 10px; /* Add spacing around icons */
+  }
+
+  /* Style the subscribe section */
+  .footer-subscribe input,
+  .footer-subscribe button {
+    max-width: 100%;
+    width: 100%; /* Ensure input fields are full width */
+    padding: 12px;
+    margin-bottom: 10px; /* Add spacing below */
+    border-radius: 4px;
+  }
+
+  .footer-subscribe button {
+    background-color: #1e7efb; /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .footer-subscribe button:hover {
+    background-color: #166fe0;
+  }
+}
+
+/* Further mobile tweaks for very small screens */
+@media (max-width: 480px) {
+  .footer h2 {
+    font-size: 18px; /* Reduce heading size further */
+  }
+
+  .footer .ph {
+    font-size: 12px; /* Smaller phone number text */
+  }
+
+  .footer-subscribe input,
+  .footer-subscribe button {
+    font-size: 14px; /* Make the input and button text smaller */
+  }
+
+  .social-icons a {
+    font-size: 22px; /* Slightly smaller social icon size */
+  }
+}
