@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - ExploreEarth</title>
+  <title>Login - ExploreEarth</title>
   <style>
     * {
       margin: 0;
@@ -67,17 +67,17 @@
       color: #ffd700;
     }
 
-    .contact-container {
+    .login-container {
       background-color: white;
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      max-width: 600px;
+      max-width: 500px;
       width: 90%;
       margin: 0 auto;
     }
 
-    .contact-container h1 {
+    .login-container h1 {
       text-align: center;
       margin-bottom: 30px;
       font-size: 36px;
@@ -91,8 +91,7 @@
       margin-top: 20px;
     }
 
-    input,
-    textarea {
+    input {
       width: 100%;
       padding: 12px;
       margin-bottom: 10px;
@@ -102,35 +101,20 @@
     }
 
     .submit-link {
-      display: block;
-      text-align: center;
       background-color: #007BFF;
       color: white;
       padding: 14px;
-      margin-top: 20px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
       transition: background 0.3s ease;
-      width: 100%;
+      border: none;
+      cursor: pointer;
     }
 
     .submit-link:hover {
       background-color: #0056b3;
-    }
-
-    .back-home {
-      display: block;
-      text-align: center;
-      margin-top: 15px;
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
-
-    .back-home:hover {
-      text-decoration: underline;
     }
 
     /* Hamburger Menu */
@@ -148,26 +132,8 @@
       border-radius: 5px;
     }
 
-    .top-nav ul {
-      display: flex;
-    }
-
-    .top-nav ul li {
-      display: block;
-    }
-
-    .top-nav ul li a {
-      padding: 10px;
-      text-align: center;
-    }
-
-    /* Mobile Styles */
+    /* Responsive */
     @media (max-width: 768px) {
-      .section {
-        flex-direction: column !important;
-        padding: 40px 20px;
-      }
-
       .top-nav ul {
         display: none;
         position: absolute;
@@ -194,6 +160,7 @@
 </head>
 <body>
 
+  <!-- Top Navigation -->
   <nav class="top-nav">
     <div class="logo">Explore<span>Earth</span></div>
     <div class="hamburger" id="hamburger">
@@ -206,24 +173,29 @@
       <li><a href="toptours.html">TOURS</a></li>
       <li><a href="about.html">ABOUT US</a></li>
       <li><a href="contact.html">CONTACT US</a></li>
-      <li><a href="login.html">LOGIN</a></li>
+      <li><a href="#">🌐 EN</a></li>
     </ul>
   </nav>
 
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <form id="contactForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Your name" required>
+  <!-- Login Form -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Your email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+      <!-- Centered Button -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="submit-link" style="width: 200px;">Login</button>
+      </div>
 
-      <a href="../index.html" class="submit-link">Send Message</a>
-      <a href="../index.html" class="back-home">Back to Home</a>
+      <!-- Back to Home Link -->
+      <div style="text-align: center; margin-top: 15px;">
+        <a href="../index.html" style="color: #007BFF; text-decoration: underline; font-weight: bold;">← Back to Home</a>
+      </div>
     </form>
   </div>
 
@@ -231,23 +203,24 @@
     // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('nav-list');
-
     hamburger.addEventListener('click', () => {
       navList.classList.toggle('active');
     });
 
-    // Basic form validation
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+    // Login form behavior
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-      if (!name || !email || !message) {
-        alert('Please fill out all fields.');
-        event.preventDefault(); // Prevent form submission
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (!username || !password) {
+        alert('Please fill in both fields.');
+      } else {
+        alert('Login successful!');
+        window.location.href = '../index.html';
       }
     });
   </script>
-
 </body>
 </html>
